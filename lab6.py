@@ -17,15 +17,6 @@ import random as r
 def differences(x):
     global permutation
     flag = True
-    if len(permutation) == 500_000:
-        d = int(input(f'\nКолличество возможных расположений достигло {len(permutation)}. '
-                      f'Хотите дождаться вывода? ( Да = 1 | Нет = 0 ): '))
-        while d != 0 and d != 1:
-            d = int(input('Принимаются только значения "0" и "1": '))
-        if d == 0:
-            flag = False
-    if len(x) < 3:
-        flag = False
     for j in range(len(x) - 2):
         if (x[j][1] == x[j+1][1] == 'Буйный') or (x[j+1][1] == x[j+2][1] == 'Буйный'):
             flag = False
